@@ -12,12 +12,9 @@ SET defines=-DRELEASE
 
 if not exist "%cd%/build" md build
 
-::cl /std:c++17 /EHsc /Fe"%cd%/build/App.exe" /Fo"%cd%/build/" %includes% %defines% src/*.cpp %links%
 
-::echo -o%cd%/build/App.exe %includes% %defines% %cd%/src/*.cpp %links%
 g++ -o "%cd%\build\App.exe" %includes% %defines% "%cd%\src\*.cpp" %links% 
 
-pause
 
 if %errorlevel% neq 0 (
 		color 0c

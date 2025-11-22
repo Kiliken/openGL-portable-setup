@@ -78,6 +78,6 @@
     },
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/src",
-        "${workspaceFolder}/include"
+        "${workspaceFolder}/dep/include"
     ]
 }
