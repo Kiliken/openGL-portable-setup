@@ -5,7 +5,7 @@ $wc = New-Object Net.WebClient
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 
 Write-Output "[GccInstall] Downloading w64devkit..."
-# $wc.DownloadFile($GccDownloadUrl, "$($PSScriptRoot)\w64devkit.7z.exe")
+$wc.DownloadFile($GccDownloadUrl, "$($PSScriptRoot)\w64devkit.7z.exe")
 
 Write-Output "[GccInstall] Extracting w64devkit in $($env:APPDATA)..."
 & "$PSScriptRoot\w64devkit.7z.exe" -o"$($env:APPDATA)" -y
