@@ -7,7 +7,7 @@ SET includes=-I%cd%\src -I%cd%\dep\include
 SET links=-L%cd%\src ^
 -L%cd%\dep\lib ^
 -lglfw3dll -lopengl32 -luser32 -lshell32 -lgdi32 -lkernel32 -ladvapi32 -lole32 ^
--loleaut32 -luuid -lodbc32 -lodbccp32
+-loleaut32 -luuid -lodbc32 -lodbccp32 -lglew32
 SET defines=-DRELEASE
 
 if not exist "%cd%/build" md build

@@ -6,6 +6,9 @@ if not exist "%appdata%/w64devkit" goto InstallGcc
 
 :SetupProject
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0InstallOpenGL.ps1"
+COPY GenerateLibs.bat "%cd%\dep\glew-2.2.0\bin\Release\x64"
+cd "%cd%\dep\glew-2.2.0\bin\Release\x64\"
+GenerateLibs.bat
 echo Project Setup completed...
 pause
 exit

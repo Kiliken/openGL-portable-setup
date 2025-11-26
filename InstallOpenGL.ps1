@@ -26,6 +26,7 @@ Write-Output "[openGL-portable-setup] Extracting GLEW..."
 Copy-Item -Path "$($PSScriptRoot)\dep\glfw-3.4.bin.WIN64\include\GLFW" -Destination "$($PSScriptRoot)\dep\include" -Recurse
 Copy-Item -Path "$($PSScriptRoot)\dep\glfw-3.4.bin.WIN64\lib-mingw-w64\*" -Destination "$($PSScriptRoot)\dep\lib" -Recurse
 Copy-Item -Path "$($PSScriptRoot)\dep\lib\glfw3.dll" -Destination "$($PSScriptRoot)\build" -Force
+Copy-Item -Path "$($PSScriptRoot)\dep\glew-2.2.0\include\GL" -Destination "$($PSScriptRoot)\dep\include" -Recurse
 
 
 return 0
