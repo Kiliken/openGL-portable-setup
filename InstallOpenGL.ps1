@@ -28,5 +28,13 @@ Copy-Item -Path "$($PSScriptRoot)\dep\glfw-3.4.bin.WIN64\lib-mingw-w64\*" -Desti
 Copy-Item -Path "$($PSScriptRoot)\dep\lib\glfw3.dll" -Destination "$($PSScriptRoot)\build" -Force
 Copy-Item -Path "$($PSScriptRoot)\dep\glew-2.2.0\include\GL" -Destination "$($PSScriptRoot)\dep\include" -Recurse
 
+Copy-Item -Path "$($PSScriptRoot)\GenerateLibs.bat" -Destination "$($PSScriptRoot)\dep\glew-2.2.0\bin\Release\x64" -Force
+Push-Location "$($PSScriptRoot)\dep\glew-2.2.0\bin\Release\x64"
+& ".\GenerateLibs.bat"
+Pop-Location
+
+# Clean Dependencies
+Remove-Item -Path "$($PSScriptRoot)\dep\glew-2.2.0" -Recurse -Force
+Remove-Item -Path "$($PSScriptRoot)\dep\glfw-3.4.bin.WIN64" -Recurse -Force
 
 return 0
